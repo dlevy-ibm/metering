@@ -1,0 +1,24 @@
+---
+#Time period is defined in days
+#Bandwidth limit is defined in GB
+default: metering_blacklist
+restricted: metering_restricted
+meters:
+   metering_whitelist:
+      time_period: 40
+      bandwidth_limit: 10000
+      bandwith_per_sec: 2000
+
+   metering_blacklist:
+      time_period: 10
+      bandwidth_limit: 100
+      bandwith_per_sec: 200
+
+   metering_restricted:
+      time_period: 10
+      bandwidth_limit: 100
+      bandwith_per_sec: 5
+
+tenants:
+   #admin is purposefully missing here
+   test: metering_blacklist
